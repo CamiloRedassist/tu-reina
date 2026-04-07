@@ -73,6 +73,8 @@ window.addEventListener('scroll', () => {
     }
 });
 
+/*  MENU  */
+
 const menuHamburguer = document.querySelector("#menu-hamburguer")
 const drawerOverlay = document.querySelector("#drawer-overlay")
 const linkMenu = document.querySelectorAll(".link-menu")
@@ -96,3 +98,26 @@ closeMenu.addEventListener("click",toggleDrawer)
 linkMenu.forEach((link)=>{
     link.addEventListener("click",toggleDrawer)
 })
+
+/*  SLIDER IMG  */
+
+const rightArrow = document.querySelector("#right-arrow")
+const leftArrow = document.querySelector("#left-arrow")
+
+const navSlider = (direction) => {
+    const slider = document.querySelector("#slider")
+    if(direction === "left"){
+        slider.scrollBy({
+            left:500,
+            behavior:"smooth"
+        })
+    }else if(direction === "right"){
+        slider.scrollBy({
+            left:-500,
+            behavior:"smooth"
+        })
+    }
+}
+
+rightArrow.addEventListener("click",() => navSlider("right"))
+leftArrow.addEventListener("click",() => navSlider("left"))
