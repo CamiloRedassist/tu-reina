@@ -75,6 +75,8 @@ window.addEventListener('scroll', () => {
 
 const menuHamburguer = document.querySelector("#menu-hamburguer")
 const drawerOverlay = document.querySelector("#drawer-overlay")
+const linkMenu = document.querySelectorAll(".link-menu")
+const closeMenu = document.querySelector("#close-menu")
 const toggleDrawer = () => {
     const nawDrawer = document.querySelector("#nav-drawer")
     if(nawDrawer.classList.contains("-translate-x-full") && drawerOverlay.classList.contains("hidden")){
@@ -90,4 +92,7 @@ const toggleDrawer = () => {
 }
 menuHamburguer.addEventListener("click",toggleDrawer)
 drawerOverlay.addEventListener("click",toggleDrawer)
-
+closeMenu.addEventListener("click",toggleDrawer)
+linkMenu.forEach((link)=>{
+    link.addEventListener("click",toggleDrawer)
+})

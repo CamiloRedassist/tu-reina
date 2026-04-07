@@ -66,17 +66,18 @@
     <div id="drawer-overlay" class="hidden opacity-0 fixed inset-0 bg-black/60 z-[55] transition-all transition-discrete duration-500"></div>
 
     <nav id="nav-drawer" class="fixed inset-y-0 left-0 w-80 z-[60] flex flex-col pt-12 bg-surface border-r border-primary/20 shadow-2xl transition-transform duration-300 -translate-x-full">
-        <div class="px-8 mb-12">
+        <div class="px-8 mb-12 flex gap-x-4">
             <img src="./img/LOGO TU REINA PELICULA PLANO.svg" alt="logotipo de tu reina" width="176" height="60">
+            <span id="close-menu" class="material-symbols-outlined group-hover:rotate-90 transition-transform">close</span>
         </div>
         <div class="flex flex-col space-y-2">
-            <a class="active:bg-primary active:text-white text-zinc-400 px-6 py-4 flex items-center space-x-4 font-headline font-bold text-lg uppercase hover:bg-zinc-900 hover:text-accent transition-colors" href="#">
+            <a class="link-menu active:bg-primary active:text-white text-zinc-400 px-6 py-4 flex items-center space-x-4 font-headline font-bold text-lg uppercase hover:bg-zinc-900 hover:text-accent transition-colors" href="#">
                 <span class="material-symbols-outlined">home</span> <span>Inicio</span>
             </a>
-            <a class="active:bg-primary active:text-white text-zinc-400 px-6 py-4 flex items-center space-x-4 font-headline font-bold text-lg uppercase hover:bg-zinc-900 hover:text-accent transition-colors" href="#synopsis">
+            <a class="link-menu active:bg-primary active:text-white text-zinc-400 px-6 py-4 flex items-center space-x-4 font-headline font-bold text-lg uppercase hover:bg-zinc-900 hover:text-accent transition-colors" href="#synopsis">
                 <span class="material-symbols-outlined">menu_book</span> <span>Sinopsis</span>
             </a>
-            <a class="active:bg-primary active:text-white text-zinc-400 px-6 py-4 flex items-center space-x-4 font-headline font-bold text-lg uppercase hover:bg-zinc-900 hover:text-accent transition-colors" href="#gallery">
+            <a class="link-menu active:bg-primary active:text-white text-zinc-400 px-6 py-4 flex items-center space-x-4 font-headline font-bold text-lg uppercase hover:bg-zinc-900 hover:text-accent transition-colors" href="#gallery">
                 <span class="material-symbols-outlined">movie</span> <span>Galería</span>
             </a>
         </div>
