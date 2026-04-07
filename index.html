@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>RED_CHRONICLE | THE CRIMSON EDITORIAL</title>
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&family=Inter:wght@300;400;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+    <style type="text/tailwindcss">
+        @font-face {
+            font-family:"futura";
+            src: url("./fonts/Futura_LT_Extra_Bold.ttf");
+        }
+        @font-face {
+            font-family:"songer";
+            src: url("./fonts/SONGER™_G_Regular.otf");
+            font-weight:500;
+        }
+        @font-face {
+            font-family:"songer";
+            src: url("./fonts/SONGER™_G_Bold.otf");
+            font-weight:700;
+        }
+        /* Configuración de Tema de la v4 integrada en CSS */
+        @theme {
+            --color-surface: #0e0e0e;
+            --color-on-surface: #e5e1e8;
+            --color-primary: #990000;
+            --color-accent: #ffb4a8;
+            --color-outline-variant: #474550;
+            --color-surface-container: #131313;
+
+            --font-headline: "futura", sans-serif;
+            --font-body: "songer", sans-serif;
+            --font-label: "songer", sans-serif;
+        }
+
+        /* Tus clases y estilos CSS originales se mantienen iguales */
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        html { scroll-behavior: smooth; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        .glitch-overlay {
+            position: fixed; inset: 0;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.04; pointer-events: none; z-index: 100;
+        }
+
+        #hero-parallax-bg, #hero-content { will-change: transform, opacity; }
+        .drawer-open #nav-drawer { transform: translateX(0); }
+        .drawer-open #drawer-overlay { opacity: 1; pointer-events: auto; }
+        .tab-content { transition: max-height 0.5s ease; overflow: hidden; }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body overflow-x-hidden selection:bg-red-600 selection:text-white drawer-closed">
+
+    <div class="glitch-overlay"></div>
+
+    <div id="drawer-overlay" class="hidden opacity-0 fixed inset-0 bg-black/60 z-[55] transition-all transition-discrete duration-500"></div>
+
+    <nav id="nav-drawer" class="fixed inset-y-0 left-0 w-80 z-[60] flex flex-col pt-12 bg-surface border-r border-primary/20 shadow-2xl transition-transform duration-300 -translate-x-full">
+        <div class="px-8 mb-12">
+            <img src="./img/LOGO TU REINA PELICULA PLANO.svg" alt="logotipo de tu reina" width="176" height="60">
+        </div>
+        <div class="flex flex-col space-y-2">
+            <a class="active:bg-primary active:text-white text-zinc-400 px-6 py-4 flex items-center space-x-4 font-headline font-bold text-lg uppercase hover:bg-zinc-900 hover:text-accent transition-colors" href="#">
+                <span class="material-symbols-outlined">home</span> <span>Inicio</span>
+            </a>
+            <a class="active:bg-primary active:text-white text-zinc-400 px-6 py-4 flex items-center space-x-4 font-headline font-bold text-lg uppercase hover:bg-zinc-900 hover:text-accent transition-colors" href="#synopsis">
+                <span class="material-symbols-outlined">menu_book</span> <span>Sinopsis</span>
+            </a>
+            <a class="active:bg-primary active:text-white text-zinc-400 px-6 py-4 flex items-center space-x-4 font-headline font-bold text-lg uppercase hover:bg-zinc-900 hover:text-accent transition-colors" href="#gallery">
+                <span class="material-symbols-outlined">movie</span> <span>Galería</span>
+            </a>
+        </div>
+    </nav>
+
+    <header class="bg-surface-container/80 backdrop-blur-2xl w-full sticky top-0 z-50 bg-gradient-to-b from-zinc-900/50 to-transparent shadow-xl">
+        <div class="flex justify-between items-center px-8 py-6 w-full">
+            <div class="flex items-center gap-4">
+                <button id="menu-hamburguer" class="lg:hidden text-accent">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+                <img src="./img/LOGO TU REINA PELICULA PLANO.svg" alt="logotipo de tu reina" width="244" height="76">
+            </div>
+            <nav class="hidden lg:flex items-center gap-10">
+                <a class="text-zinc-500 uppercase font-bold text-sm tracking-widest hover:text-accent transition-all duration-300 hover:border-b-2 border-primary pb-1" href="#">Inicio</a>
+                <a class="text-zinc-500 uppercase font-bold text-sm tracking-widest hover:text-accent transition-all duration-300 hover:border-b-2 border-primary pb-1" href="#synopsis">Sinopsis</a>
+                <a class="text-zinc-500 uppercase font-bold text-sm tracking-widest hover:text-accent transition-all duration-300 hover:border-b-2 border-primary pb-1" href="#gallery">Galería</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative h-screen w-full overflow-hidden flex items-center justify-center sticky top-0" id="hero">
+            <div class="absolute inset-0 z-0" id="hero-parallax-bg">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-surface/40 to-surface z-10"></div>
+                <img class="w-full h-full object-cover grayscale-[0.5] brightness-[0.4]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfni__P1bixfk1iOTKhHDuBq3j4nACFUmfTipkZ2dYe947h7qWZAJI8MWYJe7LdfmpY1CuCaYm5xEjm_GNaOd76BTDukuEXvmlGXAISCjHYOLPjHBN2PaTagIl7yP35-FD1Whu2i3gOK6s8KNJ5ME8tivY__zLZXKEsyynqPVEj6pY1ey9sHzHcZVO8Lason39UEvXFHq2dbytyA_goSPyqJc3BWDAHtOkcnfZGpXxocdeG29Te_QPkk-PBt8Z8Jj6oha4Lth1J44" alt="Hero Background" />
+            </div>
+            <div class="relative z-20 text-center px-6 max-w-5xl mb-32" id="hero-content">
+                <span class="block font-label text-accent tracking-[0.6em] mb-4 uppercase text-sm animate-pulse">Dos mundos que no deberían encontrarse,<br>colisionan. Y algo cambia para siempre.</span>
+                <img src="./img/LOGO TU REINA PELICULA.webp" alt="logotipo de tu reina" width="976" height="307">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                    <button class="px-10 py-5 bg-primary text-white font-black uppercase tracking-widest hover:bg-red-600 transition-all active:scale-95 shadow-2xl shadow-red-900/40" 
+                            onclick="openTrailer()">
+                        VER TRAILER
+                    </button>
+                    <button class="px-10 py-5 border-2 border-outline-variant/30 text-on-surface font-black uppercase tracking-widest hover:bg-white/5 transition-all">
+                        GET TICKETS
+                    </button>
+                </div>
+            </div>
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2">
+                <span class="font-label text-[10px] tracking-[0.4em] text-zinc-500 uppercase">Scrolear</span>
+                <div class="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent"></div>
+            </div>
+        </section>
+
+        <section class="relative py-32 px-6 md:px-20 bg-surface z-30" id="synopsis">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="font-headline text-5xl font-black mb-16 uppercase tracking-tighter text-primary">Ficha Técnica</h2>
+                <div class="flex flex-col lg:flex-row gap-16 items-start">
+                    <div class="w-full lg:w-2/5 group">
+                        <div class="relative overflow-hidden aspect-[2/3] shadow-2xl border border-zinc-800/50">
+                            <img src="./img/PORTADA_02-comprimidos.jpg" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Poster" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-3/5 flex flex-col gap-12">
+                        <div class="flex flex-col space-y-4">
+                            <div class="border-b border-zinc-800">
+                                <button class="w-full flex items-center justify-between py-6 text-left group" onclick="toggleTab('tab-synopsis')">
+                                    <div class="flex items-center gap-6">
+                                        <span class="font-label text-zinc-500 text-sm tracking-widest">01</span>
+                                        <h3 class="font-headline font-bold text-2xl uppercase group-hover:text-accent transition-colors">Sinopsis</h3>
+                                    </div>
+                                    <span class="material-symbols-outlined text-zinc-600 transition-transform" id="icon-tab-synopsis">expand_more</span>
+                                </button>
+                                <div class="tab-content max-h-[1000px]" id="tab-synopsis">
+                                    <div class="pb-8 space-y-6">
+                                        <p class="font-body text-xl md:text-2xl font-light leading-tight">Durante el Carnaval de Barranquilla, una valiente mujer trans es secuestrada.</p>
+                                        <p class="text-zinc-500 text-lg leading-relaxed">En el encierro, surge un inesperado vínculo con su captor, desafiando prejuicios en medio del ruido, el miedo y la fiesta.</p>
+                                        <div class="flex gap-12 pt-4">
+                                            <div><span class="block font-label text-zinc-600 uppercase text-xs mb-1">Director</span><span class="font-headline font-bold text-xl uppercase">Lucho Velasco</span></div>
+                                            <div><span class="block font-label text-zinc-600 uppercase text-xs mb-1">Fecha de Lanzamiento</span><span class="font-headline font-bold text-xl uppercase">9 de Abril</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-b border-zinc-800">
+                                <button class="w-full flex items-center justify-between py-6 text-left group" onclick="toggleTab('tab-credits')">
+                                    <div class="flex items-center gap-6">
+                                        <span class="font-label text-zinc-500 text-sm tracking-widest">02</span>
+                                        <h3 class="font-headline font-bold text-2xl uppercase group-hover:text-accent transition-colors">Creditos</h3>
+                                    </div>
+                                    <span class="material-symbols-outlined text-zinc-600 transition-transform" id="icon-tab-credits">expand_more</span>
+                                </button>
+                                <div class="tab-content max-h-0" id="tab-credits">
+                                    <div class="pb-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                                        <div class="space-y-4">
+                                            <h4 class="font-label text-primary uppercase text-xs">Casting</h4>
+                                            <ul class="space-y-3 font-headline uppercase font-bold text-lg">
+                                                <li class="flex justify-between items-center"><span>Alondra</span> <span class="text-zinc-700 text-xs font-label">Lucho Veslaco</span></li>
+                                                <li class="flex justify-between items-center"><span>TEO</span> <span class="text-zinc-700 text-xs font-label">Juan Palau</span></li>
+                                                <li class="flex justify-between items-center"><span>Ezequiel Bolaño</span> <span class="text-zinc-700 text-xs font-label">Mauricio Cujar</span></li>
+                                                <li class="flex justify-between items-center"><span>Guadalupe</span> <span class="text-zinc-700 text-xs font-label">Mara Cifuentes</span></li>
+                                                <li class="flex justify-between items-center"><span>Felipe Donado</span> <span class="text-zinc-700 text-xs font-label">Keisy Oviedo</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="space-y-4">
+                                            <h4 class="font-label text-primary uppercase text-xs">Adicionales</h4>
+                                            <ul class="space-y-3 font-label uppercase text-xs text-zinc-400">
+                                                <li class="flex justify-between"><span>Mistica Sound Machine</span> <span>Música</span></li>
+                                                <li class="flex justify-between"><span>Jorge Hernandez</span> <span>Diseño de Vestuario</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-b border-zinc-800">
+                                <button class="w-full flex items-center justify-between py-6 text-left group" onclick="toggleTab('tab-technical')">
+                                    <div class="flex items-center gap-6">
+                                        <span class="font-label text-zinc-500 text-sm tracking-widest">03</span>
+                                        <h3 class="font-headline font-bold text-2xl uppercase group-hover:text-accent transition-colors">Información Técnica</h3>
+                                    </div>
+                                    <span class="material-symbols-outlined text-zinc-600 transition-transform" id="icon-tab-technical">expand_more</span>
+                                </button>
+                                <div class="tab-content max-h-0" id="tab-technical">
+                                    <div class="pb-8">
+                                        <div class="bg-zinc-900/40 p-8 border border-zinc-800/50 grid grid-cols-2 gap-8">
+                                            <div><span class="block text-zinc-500 text-xs font-label uppercase mb-1">Duración</span><span class="text-lg font-headline font-black uppercase italic">148 minutos</span></div>
+                                            <div><span class="block text-zinc-500 text-xs font-label uppercase mb-1">Género</span><span class="text-lg font-headline font-black uppercase italic">Thriller / Drama</span></div>
+                                            <div><span class="block text-zinc-500 text-xs font-label uppercase mb-1">Idioma de Origen</span><span class="text-lg font-headline font-black uppercase italic">Español</span></div>
+                                            <div><span class="block text-zinc-500 text-xs font-label uppercase mb-1">Pais</span><span class="text-lg font-headline font-black uppercase italic">Colombia</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-headline text-3xl font-black mb-16 uppercase tracking-tighter text-primary">Productoras</h3>
+                            <div class="flex w-auto justify-evenly">
+                                <img class="w-32" src="./img/the seven logo.svg" alt="Logotipo de the seven g">
+                                <img class="w-32" src="./img/kut logo.svg" alt="Logotipo de kut">
+                                <img class="w-32" src="./img/noelia logo.svg" alt="Logotipo de noelia">
+                                <img class="w-32" src="./img/kasa logo.svg" alt="Logotipo de the seven g">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 bg-surface relative z-30" id="gallery">
+            <div class="px-6 md:px-20 mb-16 flex justify-between items-end">
+                <div>
+                    <h2 class="font-headline text-5xl font-black uppercase">Visuales</h2>
+                </div>
+                <div class="flex gap-4">
+                    <button class="w-12 h-12 flex items-center justify-center border border-zinc-800 hover:bg-zinc-800 transition-colors"><span class="material-symbols-outlined">west</span></button>
+                    <button class="w-12 h-12 flex items-center justify-center border border-zinc-800 hover:bg-zinc-800 transition-colors"><span class="material-symbols-outlined">east</span></button>
+                </div>
+            </div>
+            <div class="flex overflow-x-auto no-scrollbar gap-8 px-6 md:px-20 pb-12">
+                <div class="flex-none w-[85vw] md:w-[600px] h-[400px] bg-zinc-900 group relative overflow-hidden">
+                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" src="./img/foto-tu-reina.webp" />
+                </div>
+                <div class="flex-none w-[85vw] md:w-[600px] h-[400px] bg-zinc-900 group relative overflow-hidden">
+                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" src="./img/foto-tu-reina-2.webp" />
+                </div>
+                <div class="flex-none w-[85vw] md:w-[600px] h-[400px] bg-zinc-900 group relative overflow-hidden">
+                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" src="./img/foto-tu-reina-3.webp" />
+                </div>
+            </div>
+        </section>
+
+        <section class="py-40 bg-primary text-white relative overflow-hidden flex flex-col items-center justify-center text-center px-6">
+            <div class="relative z-10 space-y-8">
+                <h2 class="font-headline font-black text-5xl md:text-8xl uppercase tracking-tighter">Coming This Winter</h2>
+                <p class="font-label text-xl tracking-[0.3em] uppercase opacity-80">Only in Cinemas & IMAX</p>
+                <button class="mt-8 px-16 py-6 bg-white text-primary font-headline font-black text-2xl uppercase hover:scale-105 transition-all">GET TICKETS</button>
+            </div>
+        </section>
+
+        <footer class="w-full flex relative flex-col items-center gap-8 text-center p-12 bg-surface font-label text-[10px] tracking-widest uppercase">
+            <div class="text-primary font-black text-2xl mb-8">RED_CHRONICLE</div>
+            <div class="flex flex-wrap justify-center gap-8 mb-12">
+                <a class="text-zinc-500 hover:text-accent transition-all" href="#">PRIVACY</a>
+                <a class="text-zinc-500 hover:text-accent transition-all" href="#">TERMS</a>
+                <a class="text-zinc-500 hover:text-accent transition-all" href="#">PRESS</a>
+            </div>
+            <div class="max-w-2xl text-zinc-700 normal-case leading-relaxed font-body text-xs italic">Disclaimer: The Red Chronicle is a work of fiction... or is it?</div>
+            <p class="text-primary">© 2024 RED CHRONICLE PRODUCTIONS. ALL RIGHTS RESERVED.</p>
+        </footer>
+    </main>
+
+    <div id="trailer-popup" class="fixed inset-0 z-[50] flex items-center justify-center p-4 bg-zinc-950/5 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-500">
+        <div class="relative w-full max-w-5xl aspect-video bg-black shadow-2xl border border-red-900/20 transform scale-95 transition-transform duration-500" id="trailer-container">
+            <button class="absolute -top-12 right-0 text-zinc-400 hover:text-white flex items-center gap-2 group" onclick="closeTrailer()">
+                <span class="font-label text-[10px] uppercase tracking-widest">Cerrar</span>
+                <span class="material-symbols-outlined group-hover:rotate-90 transition-transform">close</span>
+            </button>
+            
+            <div id="video-container" class="w-full h-full">
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
