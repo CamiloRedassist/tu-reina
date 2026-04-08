@@ -5,7 +5,8 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Tu Reina | Solo en Cines</title>
-
+    <meta name="description" content="Alondra, una mujer trans se convierte en una de las principales aspirantes al reinado gay en el Carnaval de Barranquilla, su vida se cruza con la de un hombre marcado por su pasado, desencadenando una relación inesperada">
+    <meta name=”author” content=”Kasa Creativa”>
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
@@ -22,15 +23,14 @@
         }
         @font-face {
             font-family:"songer";
-            src: url("./fonts/SONGER™_G_Regular.otf");
+            src: url("./fonts/SONGER_G_Regular.otf");
             font-weight:500;
         }
         @font-face {
             font-family:"songer";
-            src: url("./fonts/SONGER™_G_Bold.otf");
+            src: url("./fonts/SONGER_G_Bold.otf");
             font-weight:700;
         }
-        /* Configuración de Tema de la v4 integrada en CSS */
         @theme {
             --color-surface: #0e0e0e;
             --color-on-surface: #e5e1e8;
@@ -43,8 +43,6 @@
             --font-body: "songer", sans-serif;
             --font-label: "songer", sans-serif;
         }
-
-        /* Tus clases y estilos CSS originales se mantienen iguales */
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         html { scroll-behavior: smooth; }
         .no-scrollbar::-webkit-scrollbar { display: none; }
@@ -71,7 +69,7 @@
 
     <nav id="nav-drawer" class="fixed inset-y-0 left-0 w-80 z-[60] flex flex-col pt-12 bg-surface border-r border-primary/20 shadow-2xl transition-transform duration-300 -translate-x-full">
         <div class="px-8 mb-12 flex gap-x-4">
-            <img src="./img/LOGO TU REINA PELICULA PLANO.svg" alt="logotipo de tu reina" width="176" height="60">
+            <img src="./img/LOGO TU REINA PELICULA PLANO.svg" title="Logotipo de Tu Reina" alt="logotipo de la pelicula tu reina" width="176" height="60">
             <span id="close-menu" class="material-symbols-outlined group-hover:rotate-90 transition-transform">close</span>
         </div>
         <div class="flex flex-col space-y-2">
@@ -93,7 +91,7 @@
                 <button id="menu-hamburguer" class="lg:hidden text-accent">
                     <span class="material-symbols-outlined text-3xl">menu</span>
                 </button>
-                <img src="./img/LOGO TU REINA PELICULA PLANO.svg" alt="logotipo de tu reina" width="244" height="76">
+                <img src="./img/LOGO TU REINA PELICULA PLANO.svg" title="Logotipo de Tu Reina Color Rojo" alt="logotipo de la pelicula tu reina en color rojo" width="244" height="76">
             </div>
             <nav class="hidden lg:flex items-center gap-10">
                 <a class="text-zinc-500 uppercase font-bold text-sm tracking-widest hover:text-accent transition-all duration-300 hover:border-b-2 border-primary pb-1" href="#">Inicio</a>
@@ -107,11 +105,12 @@
         <section class="relative h-screen w-full overflow-hidden flex items-center justify-center sticky top-0" id="hero">
             <div class="absolute inset-0 z-0" id="hero-parallax-bg">
                 <div class="absolute inset-0 bg-gradient-to-b from-transparent via-surface/40 to-surface z-10"></div>
-                <img class="w-full h-full object-cover grayscale-[0.5] brightness-[0.4]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfni__P1bixfk1iOTKhHDuBq3j4nACFUmfTipkZ2dYe947h7qWZAJI8MWYJe7LdfmpY1CuCaYm5xEjm_GNaOd76BTDukuEXvmlGXAISCjHYOLPjHBN2PaTagIl7yP35-FD1Whu2i3gOK6s8KNJ5ME8tivY__zLZXKEsyynqPVEj6pY1ey9sHzHcZVO8Lason39UEvXFHq2dbytyA_goSPyqJc3BWDAHtOkcnfZGpXxocdeG29Te_QPkk-PBt8Z8Jj6oha4Lth1J44" alt="Hero Background" />
+                <img class="w-full h-full object-cover grayscale-[0.5] brightness-[0.4]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfni__P1bixfk1iOTKhHDuBq3j4nACFUmfTipkZ2dYe947h7qWZAJI8MWYJe7LdfmpY1CuCaYm5xEjm_GNaOd76BTDukuEXvmlGXAISCjHYOLPjHBN2PaTagIl7yP35-FD1Whu2i3gOK6s8KNJ5ME8tivY__zLZXKEsyynqPVEj6pY1ey9sHzHcZVO8Lason39UEvXFHq2dbytyA_goSPyqJc3BWDAHtOkcnfZGpXxocdeG29Te_QPkk-PBt8Z8Jj6oha4Lth1J44" title="imagen de fondo de la pelicula" alt="Imagen de fondo para el primer contenido" />
             </div>
             <div class="relative z-20 text-center px-6 max-w-5xl mb-32" id="hero-content">
                 <span class="block font-label text-accent tracking-[0.6em] mb-4 uppercase text-sm animate-pulse">Dos mundos que no deberían encontrarse,<br>colisionan. Y algo cambia para siempre.</span>
-                <img src="./img/LOGO TU REINA PELICULA.webp" alt="logotipo de tu reina" width="976" height="307">
+                <img src="./img/LOGO TU REINA PELICULA.webp" title="Logotipo de Tu Reina" alt="logotipo de la pelicula tu reina" width="976" height="307">
+                <h1 class="hidden">Tu Reina Pelicula</h1>
                 <div class="flex flex-col md:flex-row items-center justify-center gap-6">
                     <button class="px-10 py-5 bg-primary text-white font-black uppercase tracking-widest hover:bg-red-600 transition-all active:scale-95 shadow-2xl shadow-red-900/40" 
                             onclick="openTrailer()">
@@ -134,7 +133,7 @@
                 <div class="flex flex-col lg:flex-row gap-16 items-start">
                     <div class="w-full lg:w-2/5 group">
                         <div class="relative overflow-hidden aspect-[2/3] shadow-2xl border border-zinc-800/50">
-                            <img src="./img/PORTADA_02-comprimidos.jpg" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Poster" />
+                            <img src="./img/PORTADA_02-comprimidos.jpg" title="Poster de la pelicula Tu Reina" alt="Segundo poster de la pelicula tu reina" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Poster" />
                             <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
                         </div>
                     </div>
@@ -150,7 +149,7 @@
                                     <span class="material-symbols-outlined text-zinc-600 transition-transform" id="icon-tab-synopsis">expand_more</span>
                                 </button>
                                 <div class="tab-content max-h-[1000px]" id="tab-synopsis">
-                                    <div class="pb-8 space-y-6">
+                                    <article class="pb-8 space-y-6">
                                         <p class="font-body text-xl md:text-2xl font-light leading-tight">Alejandro-alondra es un chico que pertenece a una de las familias más adineradas y prestantes de Barranquilla.
                                             Harto de la presión de su padre, se va de la casa para asumir la identidad de “Alondra”, una mujer trans que sueña con ser libre y vivir en paz. </p>
                                         <p class="text-zinc-500 text-lg leading-relaxed">En su nuevo hogar, Alondra pasa su cotidianidad en medio de un ambiente de paz y libertad. En medio de su nueva identidad, vivirá́ por primera vez
@@ -160,7 +159,7 @@
                                             <div><span class="block font-label text-zinc-600 uppercase text-xs mb-1">Director</span><span class="font-headline font-bold text-xl uppercase">Lucho Velasco</span></div>
                                             <div><span class="block font-label text-zinc-600 uppercase text-xs mb-1">Fecha de Lanzamiento</span><span class="font-headline font-bold text-xl uppercase">9 de Abril</span></div>
                                         </div>
-                                    </div>
+                                    </article>
                                 </div>
                             </div>
                             <div class="border-b border-zinc-800">
@@ -172,7 +171,7 @@
                                     <span class="material-symbols-outlined text-zinc-600 transition-transform" id="icon-tab-credits">expand_more</span>
                                 </button>
                                 <div class="tab-content max-h-0" id="tab-credits">
-                                    <div class="pb-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <article class="pb-8 grid grid-cols-1 md:grid-cols-2 gap-8">
                                         <div class="space-y-4">
                                             <h4 class="font-label text-primary uppercase text-xs">Casting</h4>
                                             <ul class="space-y-3 font-headline uppercase font-bold text-lg">
@@ -190,7 +189,7 @@
                                                 <li class="flex justify-between"><span>Jorge Hernandez</span> <span>Diseño de Vestuario</span></li>
                                             </ul>
                                         </div>
-                                    </div>
+                                    </article>
                                 </div>
                             </div>
                             <div class="border-b border-zinc-800">
@@ -202,24 +201,24 @@
                                     <span class="material-symbols-outlined text-zinc-600 transition-transform" id="icon-tab-technical">expand_more</span>
                                 </button>
                                 <div class="tab-content max-h-0" id="tab-technical">
-                                    <div class="pb-8">
+                                    <article class="pb-8">
                                         <div class="bg-zinc-900/40 p-8 border border-zinc-800/50 grid grid-cols-2 gap-8">
                                             <div><span class="block text-zinc-500 text-xs font-label uppercase mb-1">Duración</span><span class="text-lg font-headline font-black uppercase italic">148 minutos</span></div>
                                             <div><span class="block text-zinc-500 text-xs font-label uppercase mb-1">Género</span><span class="text-lg font-headline font-black uppercase italic">Thriller / Drama</span></div>
                                             <div><span class="block text-zinc-500 text-xs font-label uppercase mb-1">Idioma de Origen</span><span class="text-lg font-headline font-black uppercase italic">Español</span></div>
                                             <div><span class="block text-zinc-500 text-xs font-label uppercase mb-1">Pais</span><span class="text-lg font-headline font-black uppercase italic">Colombia</span></div>
                                         </div>
-                                    </div>
+                                    </article>
                                 </div>
                             </div>
                         </div>
                         <div>
                             <h3 class="font-headline text-3xl font-black mb-16 uppercase tracking-tighter text-primary">Productoras</h3>
                             <div class="flex w-auto justify-evenly flex-wrap">
-                                <img class="w-24 md:w-32" src="./img/the seven logo.svg" alt="Logotipo de the seven g">
-                                <img class="w-24 md:w-32" src="./img/kut logo.svg" alt="Logotipo de kut">
-                                <img class="w-24 md:w-32" src="./img/noelia logo.svg" alt="Logotipo de noelia">
-                                <img class="w-24 md:w-32" src="./img/kasa logo.svg" alt="Logotipo de the seven g">
+                                <img class="w-24 md:w-32" src="./img/the seven logo.svg" title="Logotipo de The Seven G" alt="Logotipo de la productora the seven g">
+                                <img class="w-24 md:w-32" src="./img/kut logo.svg" title="Logotipo de Kut" alt="Logotipo de la productora kut">
+                                <img class="w-24 md:w-32" src="./img/noelia logo.svg" title="Logotipo de Noelia" alt="Logotipo de la productora noelia">
+                                <img class="w-24 md:w-32" src="./img/kasa logo.svg" title="Logotipo de Kasa Creativa" alt="Logotipo de la productora kasa creativa">
                             </div>
                         </div>
                     </div>
@@ -239,40 +238,40 @@
             </div>
             <div id="slider" class="flex overflow-x-auto no-scrollbar gap-8 px-6 md:px-20 pb-12">
                 <div class="flex-none w-[85vw] md:w-[600px] h-[400px] bg-zinc-900 group relative overflow-hidden">
-                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" src="./img/foto-tu-reina.webp" />
+                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" title="Fotografia de la Pelicula Tu Reina de la Escenografia" alt="Fotografia de la pelicula tu reina" src="./img/foto-tu-reina.webp" />
                 </div>
                 <div class="flex-none w-[85vw] md:w-[600px] h-[400px] bg-zinc-900 group relative overflow-hidden">
-                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" src="./img/foto-tu-reina-2.webp" />
+                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" title="Fotografia de la Pelicula Tu Reina de la protagonista cantando" alt="Fotografia de la pelicula tu reina" src="./img/foto-tu-reina-2.webp" />
                 </div>
                 <div class="flex-none w-[85vw] md:w-[600px] h-[400px] bg-zinc-900 group relative overflow-hidden">
-                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" src="./img/foto-tu-reina-3.webp" />
+                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" title="Fotografia de la Pelicula Tu Reina de la protagonista cantando en plano medio corto" alt="Fotografia de la pelicula tu reina" src="./img/foto-tu-reina-3.webp" />
                 </div>
                 <div class="flex-none w-[85vw] md:w-[600px] h-[400px] bg-zinc-900 group relative overflow-hidden">
-                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" src="./img/foto-tu-reina-4.webp" />
+                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" title="Fotografia de la Pelicula Tu Reina del antagonista" alt="Fotografia de la pelicula tu reina" src="./img/foto-tu-reina-4.webp" />
                 </div>
                 <div class="flex-none w-[85vw] md:w-[600px] h-[400px] bg-zinc-900 group relative overflow-hidden">
-                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" src="./img/foto-tu-reina-5.webp" />
+                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" title="Fotografia de la Pelicula Tu Reina de la Escenografia con iconografia religiosa" alt="Fotografia de la pelicula tu reina" src="./img/foto-tu-reina-5.webp" />
                 </div>
                 <div class="flex-none w-[85vw] md:w-[600px] h-[400px] bg-zinc-900 group relative overflow-hidden">
-                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" src="./img/foto-tu-reina-6.webp" />
+                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" title="Fotografia de la Pelicula Tu Reina de la protagonista en la escenografia religiosa" alt="Fotografia de la pelicula tu reina" src="./img/foto-tu-reina-6.webp" />
                 </div>
                 <div class="flex-none w-[85vw] md:w-[600px] h-[400px] bg-zinc-900 group relative overflow-hidden">
-                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" src="./img/foto-tu-reina-7.webp" />
+                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" title="Fotografia de la Pelicula Tu Reina de la protagonista con el antagonista" alt="Fotografia de la pelicula tu reina" src="./img/foto-tu-reina-7.webp" />
                 </div>
                 <div class="flex-none w-[85vw] md:w-[600px] h-[400px] bg-zinc-900 group relative overflow-hidden">
-                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" src="./img/foto-tu-reina-8.webp" />
+                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" title="Fotografia de la Pelicula Tu Reina del protagonista" alt="Fotografia de la pelicula tu reina" src="./img/foto-tu-reina-8.webp" />
                 </div>
                 <div class="flex-none w-[85vw] md:w-[600px] h-[400px] bg-zinc-900 group relative overflow-hidden">
-                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" src="./img/foto-tu-reina-9.webp" />
+                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" title="Fotografia de la Pelicula Tu Reina de 2 personajes secundarios tomando alcohol" alt="Fotografia de la pelicula tu reina" src="./img/foto-tu-reina-9.webp" />
                 </div>
                 <div class="flex-none w-[85vw] md:w-[600px] h-[400px] bg-zinc-900 group relative overflow-hidden">
-                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" src="./img/foto-tu-reina-10.webp" />
+                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" title="Fotografia de la Pelicula Tu Reina de los 2 protagonistas" alt="Fotografia de la pelicula tu reina" src="./img/foto-tu-reina-10.webp" />
                 </div>
                 <div class="flex-none w-[85vw] md:w-[600px] h-[400px] bg-zinc-900 group relative overflow-hidden">
-                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" src="./img/foto-tu-reina-11.webp" />
+                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" title="Fotografia de la Pelicula Tu Reina de la protagonista siendo ahorcada por el antagonista" alt="Fotografia de la pelicula tu reina" src="./img/foto-tu-reina-11.webp" />
                 </div>
                 <div class="flex-none w-[85vw] md:w-[600px] h-[400px] bg-zinc-900 group relative overflow-hidden">
-                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" src="./img/foto-tu-reina-12.webp" />
+                    <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" title="Fotografia de la Pelicula Tu Reina de una cabeza de un maniqui en un lavamanos" alt="Fotografia de la pelicula tu reina" src="./img/foto-tu-reina-12.webp" />
                 </div>
             </div>
         </section>
